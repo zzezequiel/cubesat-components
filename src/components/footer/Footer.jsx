@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Footer = () => {
+ const Footer = () => {
   return (
     <div className="container mt-5">
   <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -21,3 +21,4 @@ export const Footer = () => {
 </div>
   )
 }
+export default React.memo(Footer)
