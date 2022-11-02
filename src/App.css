@@ -339,3 +339,11 @@ a,
   flex-wrap: wrap;
 }
 
+
+
+
+/*Cart*/
+.cart-product-img{
+  width: 48px;
+  height: 48px;
+}

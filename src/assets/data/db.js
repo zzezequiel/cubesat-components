@@ -9,7 +9,7 @@ import Transceiver from "../../assets/img/UHF-Transceiver.jpg"
 import SatCOM from "../../assets/img/SatCOM-FMTP.jpg"
 
 
-  export const Products = [
+  export const DataProducts = [
     {   id: 1,
         amount: 0,
         title: "CubeSat Electrical Power System EPS",

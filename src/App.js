@@ -3,7 +3,7 @@ import React from 'react'
 
 import { Banner } from './components/body/Banner';
 import { MainDescription } from './components/body/MainDescription';
-import { MainProducts } from './components/body/MainProducts';
+import { Products } from './components/body/Products';
 import Footer  from './components/footer/Footer';
 import { TopNav } from './components/Top/TopNav';
 import Cart from './components/cart/Cart';
@@ -17,7 +17,8 @@ function App() {
       <TopNav />
       <Banner />
       <MainDescription />
-      <MainProducts />
+      <Cart />
+      <Products />
       
       <Footer />
       </CartProvider>

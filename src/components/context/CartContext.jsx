@@ -1,5 +1,6 @@
 import {createContext, useEffect, useState} from 'react'
 
+
 export const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
@@ -16,43 +17,46 @@ export const CartProvider = ({children}) => {
     console.log(cartItems)
   }, [cartItems]);
 
-  const addItemToCart = (products) => {
+  const addItemToCart = (product) => {
     const inCart = cartItems.find(
-      (productInCart) => productInCart.id === products.id
+      (productInCart) => productInCart.id === product.id
     );
     if(inCart){
       setCartItems(
         cartItems.map((productInCart) =>{
-          if(productInCart.id === products.id){
+          if(productInCart.id === product.id){
             return {...inCart, amount: inCart.amount + 1}
           }else return productInCart;
         })
       );
     } else {
-      setCartItems([...cartItems, {...products, amount: 1}])
+      setCartItems([...cartItems, {...product, amount: 1}])
     }
   };
-  const deleteItemToCart = (products) => {
+  const deleteItemToCart = (product) => {
     const inCart = cartItems.find(
-      (productInCart) => productInCart.id === products.id
+      (productInCart) => productInCart.id === product.id
     );
 
-    //amoun = 1 return all except products.id deleted
+    //amoun = 1 return all except product.id deleted
     if(inCart.amount === 1){
       setCartItems(
-        cartItems.filter(productInCart => productInCart.id !== products.id)
+        cartItems.filter(productInCart => productInCart.id !== product.id)
       );
     } else {
-      //delete 1 products of the amount
-      setCartItems((productInCart) => {
-        if(productInCart.id === products.id) {
+      //delete 1 product of the amount
+      setCartItems(
+        cartItems.map((productInCart) => {
+        if(productInCart.id === product.id) {
           return {...inCart, amount: inCart.amount -1}
         }else return productInCart
       })
+      );
     }
   };
   return (
-    <CartContext.Provider value={{cartItems, addItemToCart, deleteItemToCart}}>
+    <CartContext.Provider 
+    value={{cartItems, addItemToCart, deleteItemToCart}}>
       {children}
     </CartContext.Provider>
   )

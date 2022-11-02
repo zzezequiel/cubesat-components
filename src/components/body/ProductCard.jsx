@@ -5,7 +5,7 @@ import React from 'react'
 
 export const ProductCard = ({title, description, price, img, }) => {
   return (
-    
+            <div>
                <div className="col-md-4 padding_leri mt-5 mb-4">
                   <div className="product-box">
                      <figure><img className="product-img" src={img} alt="#"/></figure>
@@ -16,6 +16,7 @@ export const ProductCard = ({title, description, price, img, }) => {
 
                   </div>
                </div>
+            </div>
          
   )
 }
