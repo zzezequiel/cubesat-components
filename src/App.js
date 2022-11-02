@@ -20,6 +20,7 @@ function App() {
       <Cart />
       <Products />
       <Footer />
+      
     </CartProvider>
     
   );
