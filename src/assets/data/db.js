@@ -7,6 +7,12 @@ import Magnetorques from "../../assets/img/Magnetorques.png"
 import Payload_controller from "../../assets/img/Payload-controller.jpg"
 import Transceiver from "../../assets/img/UHF-Transceiver.jpg"
 import SatCOM from "../../assets/img/SatCOM-FMTP.jpg"
+import Antena from "../../assets/img/uhf3-1024x946rez-500x462.png"
+import Structural from "../../assets/img/6U-rez-500x462.png"
+import S_brand_Transceiver from "../../assets/img/S-band-Transceiver-new-500x500.jpg"
+import Patch_Antena from "../../assets/img/S-Band-Patch-Antenna-new-500x500.jpg"
+import Receiver from "../../assets/img/AIS-Receiver-new-500x500.jpg"
+
 
 
   export const DataProducts = [
@@ -80,6 +86,46 @@ import SatCOM from "../../assets/img/SatCOM-FMTP.jpg"
         description: "SatCOM TP0 is a high-quality FM repeater for small satellites, designed by NanoAvionics’ partner LY3H. It is fully pre-programmed and configured prior to shipment according to customer request. No dedicated power-on signal is required, the device is either ON or OFF state and is ready for operation immediately after turning on.<br>Right after the repeater is activated a voice/CW message is transmitted once. Later the message is transmitted repeatedly every 4 minutes if uplink (CQ) signal is detected. The repeater can share single reception antenna with other receivers working on a similar band through a passive, therefore highly reliable electronic splitter circuit.",
         price: 120,
         img: SatCOM
+    },
+    {
+        id: 10,
+        amount: 0,
+        title: "CubeSat UHF Antenna System",
+        description:"NanoAvionics UHF Antenna System consists of RF Splitter and 4 monopole antennae. RF Splitter is a key element in turnstile antenna systems that performs impedance matching and splits one RF signal into a phasing network in order to form a single circular polarized antenna. This results in an almost omnidirectional radiation pattern with no blind spots, which can cause signal fading due to satellite tumbling. An aperture can be provided inside the splitter board for hardware integration purposes.",
+        price: 235,
+        img: Antena
+    },
+    {
+        id: 11,
+        amount: 0,
+        title: "CubeSat Structural Frame",
+        description: "NanoAvionics CubeSat Standard Structure has been developed as a generic, modular nanosatellite structure compliant with the CubeSat Design Specification. The design created allows CubeSat developers a high level of freedom in their spacecraft configuration. The framework is made from aluminum 7075-T7351, which ensures rigidity, lightweight, and durability. Frames have a modular internal layout, compatible with PC/104 stacks. Stacks are mounted on standard mounting rings and can be oriented on any of the three main axes",
+        price: 25,
+        img: Structural
+    },
+    {
+        id: 12,
+        amount: 0,
+        title: "CubeSat S-Band Transceiver",
+        description: "This full-duplex low-power S-band Transceiver is designed by NanoAvionics’ partner Satlab for TM & TC on micro- and nano-satellites.<br>The transceiver operates on the ITU space operations S-band frequencies with GMSK modulation and CCSDS recommended channel coding, enabling integration with both individual and commercial ground station networks.<br>The unit has separate filtered RF connections for input and output, allowing for different receiving and transmitting antennas.",
+        price: 195,
+        img: S_brand_Transceiver
+    },
+    {
+        id: 13,
+        amount: 0,
+        title: "CubeSat S-Band Patch Antenna",
+        description: "The antenna is designed by NanoAvionics’ partner IQ Spacecom for pico- and nano-satellite applications to implement high data rate satellite-to-ground communication. With circular polarization, it provides a robust solution with regards to steering accuracy to the ground station and in case of a random rotation of the satellite.<br>Dual Patch Antenna is also available.",
+        price: 58,
+        img: Patch_Antena
+    },
+    {
+        id: 14,
+        amount: 0,
+        title: "CubeSat AIS Receiver",
+        description: "This 4-channel AIS Receiver, “Polaris”, is designed by NanoAvionics’ partner Satlab. Polaris is a fully self-contained software-defined radio receiver for the maritime VHF band, with integrated demodulators for reception of standard and long-range AIS messages.<br>This versatile SDR offers excellent performance given the typical size, weight, and power constraints of a CubeSat – or as an additional payload on larger LEO satellites.<br>Polaris is Satlab’s second generation Satellite-AIS receiver, based on the in-orbit experience gained from the QubeAIS receiver, which has flown on several missions since 2013.",
+        price: 298,
+        img: Receiver
     }
     ]
 

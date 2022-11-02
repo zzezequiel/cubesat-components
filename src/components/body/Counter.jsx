@@ -14,9 +14,9 @@ const subtrac = () => {
   return (
     <section>
         <h4 className='text-center'>Quantity needed: {count}</h4>
-        <div className="row btn-group-sm">
-            <button className='col btn btn-outline-primary' onClick={add}>+</button>
-            <button className='col btn btn-outline-primary' onClick={subtrac}>-</button>
+        <div className="cont-quantity text-center">
+            <button className='col quantity mx-2' onClick={subtrac}>-</button>
+            <button className='col quantity mx-2' onClick={add}>+</button>
         </div>
     </section>
   )

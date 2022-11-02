@@ -29,11 +29,8 @@ export const TopNav = () => {
                               <li className="nav-item">
                                  <a className="nav-link" href="#">About</a>
                               </li>
-                              <li className="nav-item">
-                                 <a className="nav-link" href="#">Contact us</a>
-                              </li>
                            </ul>
-                           <div className="sign_btn"><a href="#">Sign in</a></div>
+                           <div className="sign_btn"><a className="nav-link" href="#">Contact us</a></div>
                         </div>
                      </nav>
                   </div>

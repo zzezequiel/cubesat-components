@@ -19,9 +19,8 @@ function App() {
       <MainDescription />
       <Cart />
       <Products />
-      
       <Footer />
-      </CartProvider>
+    </CartProvider>
     
   );
 }

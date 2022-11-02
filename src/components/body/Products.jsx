@@ -10,26 +10,26 @@ export const Products = () => {
    
   return (
    
-   <div  className="car">
-      <div className="container">
-         <div className="row">
+   
+      <div className="container ">
+         <div className="row  ">
    {DataProducts.map((product,i) => 
    
-            <div className="col-md-4 padding_leri mt-5 mb-4" key={i}>
-               <div className="product-box">
+            <div className="col-md-4 padding_leri mt-5 mb-4 shadow-sm p-3 mb-5 rounded cont-product cont-all" key={i}>
+               <div className="product-box text-center">
                   <figure><img className="product-img" src={product.img} alt="#"/></figure>
                   <h3>{product.title}</h3>
-                  <h3>Price: {product.price}</h3>
+                  <h3>Price: {product.price} €</h3>
                   <Counter />
-                  <button className='btn btn-success mt-3' onClick={()=>addItemToCart(product)}>Add to cart</button>
-
-
+                  <div className=''>
+                   <button className='mt-3 add-to-cart cart ' onClick={()=>addItemToCart(product)}>Add to cart</button>
+                  </div>
                </div>
             </div>
    )}
          </div>
       </div>
-   </div>
+   
      
    
   )
