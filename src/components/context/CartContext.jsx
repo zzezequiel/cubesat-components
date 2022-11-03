@@ -17,6 +17,17 @@ export const CartProvider = ({children}) => {
     console.log(cartItems)
   }, [cartItems]);
 
+
+  const [count, setCount] = useState(0);
+
+  const add = () => {
+      setCount(prev=> prev + 1)
+  }
+  const subtrac = () => {
+      setCount(prev=> prev - 1)
+  }
+  
+
   const addItemToCart = (product) => {
     const inCart = cartItems.find(
       (productInCart) => productInCart.id === product.id
@@ -25,12 +36,16 @@ export const CartProvider = ({children}) => {
       setCartItems(
         cartItems.map((productInCart) =>{
           if(productInCart.id === product.id){
+            if(count === 0){
             return {...inCart, amount: inCart.amount + 1}
+            } else return {...inCart, amount: inCart.amount + count}
           }else return productInCart;
         })
       );
     } else {
+      if(count === 0){
       setCartItems([...cartItems, {...product, amount: 1}])
+      } else setCartItems([...cartItems, {...product, amount: count}])
     }
   };
   const deleteItemToCart = (product) => {
@@ -56,7 +71,7 @@ export const CartProvider = ({children}) => {
   };
   return (
     <CartContext.Provider 
-    value={{cartItems, addItemToCart, deleteItemToCart}}>
+    value={{cartItems,count, addItemToCart, deleteItemToCart, subtrac, add}}>
       {children}
     </CartContext.Provider>
   )
