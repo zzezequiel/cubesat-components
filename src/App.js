@@ -1,5 +1,6 @@
-import './App.css';
+import './Home.css';
 import React from 'react'
+import MainHome from './componentsHome/main/MainHome';
 
 
 
@@ -7,7 +8,9 @@ import React from 'react'
 function App() {
   return (
    
-    <div>Home</div>
+    <>
+      <MainHome />
+    </>
     
   );
 }

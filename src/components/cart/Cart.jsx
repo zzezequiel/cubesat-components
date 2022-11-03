@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import ItemCart from '../itemCart/ItemCart';
+import accounting from "accounting"
 
 const Cart = () => {
   //set cartOpen, always start in false (close)
@@ -55,7 +56,7 @@ const total = cartItems.reduce(
             ))}
           </div>
         )}
-        <h2>Total: ${total}</h2>
+        <h2>Total: {accounting.formatMoney(total,{symbol:"€", format:"%v %s"})}</h2>
       </div>
     )}
   </div>

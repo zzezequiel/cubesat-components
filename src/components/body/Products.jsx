@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import {DataProducts} from "../../assets/data/db.js";
 import { CartContext } from '../context/CartContext';
 import { Counter } from './Counter'
+import accounting from "accounting"
 
 
 
@@ -20,7 +21,7 @@ export const Products = () => {
                <div className="product-box text-center">
                   <figure><img className="product-img" src={product.img} alt="#"/></figure>
                   <h3>{product.title}</h3>
-                  <h3>Price: {product.price} €</h3>
+                  <h3>Price: {accounting.formatMoney(product.price,{symbol:"€", format:"%v %s"})} €</h3>
                   <Counter />
                   <div className=''>
                    <button className='mt-3 add-to-cart cart ' onClick={()=>addItemToCart(product)}>Add to cart</button>
