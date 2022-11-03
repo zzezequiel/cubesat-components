@@ -1,3 +1,4 @@
+import { Link, Outlet } from 'react-router-dom'
 import React from 'react'
 
 export const TopNav = () => {
@@ -24,19 +25,32 @@ export const TopNav = () => {
                         <div className="collapse navbar-collapse" id="navbarsExample04">
                            <ul className="navbar-nav mr-auto">
                               <li className="nav-item">
-                                 <a className="nav-link" st href="index.html"> Home  </a>
+                                 <Link to="/" className="nav-link"> Home  </Link>
                               </li>
                               <li className="nav-item">
-                                 <a className="nav-link" href="#">About</a>
+                                 <Link to="/about" className="nav-link">About</Link >
+                              </li>
+                              <li className="nav-item dropdown">
+                                 <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                 </div>
+                                 <ul className="dropdown-menu dropdown-menu-dark">
+                                    <li><Link to="/subsystems" className="dropdown-item" >Subsystems</Link></li>
+                                    <li><Link to="/satbuses" className="dropdown-item" >Satellite Buses</Link></li>
+                                 </ul>
                               </li>
                            </ul>
-                           <div className="sign_btn"><a className="nav-link" href="#">Contact us</a></div>
+                           <Link to="/contact"><div className="sign_btn"><a className="nav-link">Contact us</a></div></Link>
                         </div>
                      </nav>
                   </div>
                </div>
             </div>
          </div>
+         <section>
+            <Outlet />
+         </section>
+         
       </header>
       </>
   )
