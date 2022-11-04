@@ -1,17 +1,22 @@
 import './Home.css';
 import React from 'react'
-import MainHome from './componentsHome/main/MainHome';
+import  TopNav  from './Top/TopNav';
+import Router from './routes/Router';
+import {BrowserRouter} from "react-router-dom"
 
 
 
 
 function App() {
   return (
-   
     <>
-      <MainHome />
+    <BrowserRouter>
+
+      <TopNav />
+      <Router />
+
+    </BrowserRouter>
     </>
-    
   );
 }
 

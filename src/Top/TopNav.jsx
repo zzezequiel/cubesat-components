@@ -1,7 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
-import React from 'react'
+import React, { memo } from 'react'
 
-export const TopNav = () => {
+ const TopNav = () => {
   return (
    <>
     <header>
@@ -55,3 +55,4 @@ export const TopNav = () => {
       </>
   )
 }
+export default memo(TopNav)
