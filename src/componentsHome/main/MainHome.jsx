@@ -1,23 +1,72 @@
 import React from 'react'
-
+import icon from "../../assets/img/code-working-sharp.svg"
 const MainHome = () => {
   return (
-    <section className="text-center full-page">
-    <img src='../.././assets/img/Satellite.mp4'alt='background'></img>
-        <div className="">
-            <main className="px-3 ">
-                <h1>Cover your page.</h1>
-                <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-                <p className="lead">
-                <a href="#" className="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-                </p>
-            </main>
+    <main className='backgorundHome'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col'>
+            <h1>CubeSat ZZ</h1>
+            <h2>Global IoT connectivity to monitor assets through our satellites and nodes</h2>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col'>
+                  <div className='row'>
+                   <img src={icon} width="60px" height="60px"/>
+                  </div>
+                  <div className='row'>
+                    <p>Bidirectional communication that allows obtaining data from the asset and communicating with it</p>
+                  </div>
+                </div>
 
-            {/* <footer className="mt-auto text-white-50">
-                <p>Cover template for <a href="https://getbootstrap.com/" className="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" className="text-white">@mdo</a>.</p>
-            </footer>*/}
-        </div> 
-    </section>
+                <div className='col'>
+                  <div className='row'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-currency-exchange" viewBox="0 0 16 16">
+                      <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
+                    </svg>
+                  </div>
+                  <div className='row'>
+                    <p>Bidirectional communication that allows obtaining data from the asset and communicating with it</p>
+                  </div>
+                </div>
+
+                <div className='col'>
+                  <div className='row'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-battery-charging" viewBox="0 0 16 16">
+                      <path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"/>
+                      <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+                      <path d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2V6zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405z"/>
+                      <path d="M12 10h-1.783l1.542-1.639c.097-.103.178-.218.241-.34V10zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646zM16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"/>
+                    </svg>
+                  </div>
+                  <div className='row'>
+                    <p>Bidirectional communication that allows obtaining data from the asset and communicating with it</p>
+                  </div>
+                </div>
+
+                <div className='col'>
+                  <div className='row'>
+                      icon
+                  </div>
+                  <div className='row'>
+                    <p>Bidirectional communication that allows obtaining data from the asset and communicating with it</p>
+                  </div>
+                </div>
+              </div>
+
+              
+              
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </main>
 
   )
 }
