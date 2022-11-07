@@ -19,3 +19,10 @@ width: 800px;
     color: white;
     margin-top: 250px;
 }
+.bg-footer {
+    height: 20vh;
+    background-color: black;
+}
+.bg-buy {
+    background-color: black;
+}
