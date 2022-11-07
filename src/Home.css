@@ -3,3 +3,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.home-bg {
+     background: linear-gradient(white , black 20%);;
+} 
+.img-conect {
+width: 800px;
+}
+.row-img {
+    margin-top: 150px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.title-conect {
+    color: white;
+    margin-top: 250px;
+}
