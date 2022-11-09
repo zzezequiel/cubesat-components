@@ -30,28 +30,35 @@ const errorMessage = validate(email, password, confirm_password);
             type="text"
             className='form-control mt-4'
             name='username'
-            value={username}
+            placeholder='Your name'
             onChange={onInputChange}
             />
             <input 
             type="text"
             className='form-control mt-4'
             name='lastName'
-            value={lastName}
+            placeholder='Your lastname'
             onChange={onInputChange}
             />
             <input 
             type="email"
             className='form-control mt-4'
             name='email'
-            value={email}
+            placeholder='Your email'
+            onChange={onInputChange}
+            />
+            <input 
+            type="num"
+            className='form-control mt-4'
+            name='tel'
+            placeholder='Your TEL'
             onChange={onInputChange}
             />
             <input 
             type="password"
             className='form-control mt-4'
             name='password'
-            value={password}
+            
             placeholder="Password"
             onChange={onInputChange}
             />
@@ -59,7 +66,7 @@ const errorMessage = validate(email, password, confirm_password);
             type="password"
             className='form-control mt-4'
             name='confirm_password'
-            value={confirm_password}
+            
             placeholder="confirm your password"
 
             onChange={onInputChange}

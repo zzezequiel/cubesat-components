@@ -486,3 +486,17 @@ font-size: 100PX;
 .seemore:hover {
   color: #fff;
 }
+
+
+
+/*Contact*/
+.message-contact{
+  height: 150px;
+}
+.checkbox-block{
+  
+}
+.checkbox-contact{
+  font-size: 10px;
+  line-height:1rem;
+}
