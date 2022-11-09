@@ -39,8 +39,13 @@ import React, { memo } from 'react'
                                     <li><Link to="/satbuses" className="dropdown-item" >Satellite Buses</Link></li>
                                  </ul>
                               </li>
+                              <li className='nav-item'>
+                                 <Link to="/singin" className="nav-link">
+                                    Sign in!
+                                 </Link>
+                              </li>
                            </ul>
-                           <Link to="/contact"><div className="sign_btn"><Link className="nav-link">Contact us</Link></div></Link>
+                           <Link to="/contact" className='sign_btn top-contact'>Contact</Link>
                         </div>
                      </nav>
                   </div>

@@ -261,7 +261,19 @@ margin: 8px;
 .sign_btn a:hover {
   color: #fff;
 }
-
+.top-contact{
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+.top-contact:hover{
+  color: #fff;
+  
+}
 /** banner section **/
 
 .banner_main {
@@ -388,13 +400,33 @@ div .add-to-cart {
   color: #fff;
 }
 
+.checkout {
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
 
+.checkout:hover {
+  color: #fff;
+}
 
+.delete-all:hover{
+  color: #fff;
 
-
-
-
-
+}
+.delete-all{
+  background-color: rgb(220,53,69) ;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
 /*SAT*/
 
 

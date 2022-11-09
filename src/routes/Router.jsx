@@ -6,6 +6,7 @@ import { Routes, Route, Navigate} from "react-router-dom"
 import SatBuses from '../SatBuses';
 import MainHome from '../componentsHome/main/MainHome';
 import DetailProduct from '../componentsSat/productPage/DetailProduct';
+import SingIn from '../SingIn';
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
                 <Route path="/subsystems" element={<Subsystems />}></Route>
                 <Route path="/satbuses" element={<SatBuses />}></Route>
                 <Route path="/product" element={<DetailProduct />}></Route>
+                <Route path="/singin" element={<SingIn />}></Route>
                 <Route path="/*" element={<Navigate replace to="/" />}></Route>
         </Routes>
         </>
