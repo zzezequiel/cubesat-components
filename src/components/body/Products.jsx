@@ -3,6 +3,8 @@ import {DataProducts} from "../../assets/data/db.js";
 import { CartContext } from '../context/CartContext';
 import { Counter } from './Counter'
 import accounting from "accounting"
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -13,7 +15,7 @@ export const Products = () => {
    
    
       <div className="container box ">
-         <iframe src="https://giphy.com/embed/LpdKGGXFqAyiHA0UYt" width="480" height="457" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/EvaGarnerSecretEden-eva-garner-the-secret-of-eden-le-de-leden-LpdKGGXFqAyiHA0UYt"></a></p>
+         <iframe src="https://giphy.com/embed/LpdKGGXFqAyiHA0UYt" width="480" height="457" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><Link to="https://giphy.com/stickers/EvaGarnerSecretEden-eva-garner-the-secret-of-eden-le-de-leden-LpdKGGXFqAyiHA0UYt"></Link></p>
          <div className="row  ">
    {DataProducts.map((product,i) => 
    

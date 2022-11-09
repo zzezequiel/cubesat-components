@@ -12,7 +12,7 @@ import React, { memo } from 'react'
                      <div className="full">
                         <div className="center-desk">
                            <div className="logo">
-                              <a href="index.html"><img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="65px" alt="#" /></a>
+                              <Link to="index.html"><img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="65px" alt="#" /></Link>
                            </div>
                         </div>
                      </div>
@@ -40,7 +40,7 @@ import React, { memo } from 'react'
                                  </ul>
                               </li>
                            </ul>
-                           <Link to="/contact"><div className="sign_btn"><a className="nav-link">Contact us</a></div></Link>
+                           <Link to="/contact"><div className="sign_btn"><Link className="nav-link">Contact us</Link></div></Link>
                         </div>
                      </nav>
                   </div>
