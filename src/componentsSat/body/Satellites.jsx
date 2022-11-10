@@ -1,4 +1,4 @@
-import { getByDisplayValue } from '@testing-library/react'
+
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -13,7 +13,7 @@ const Satellites = () => {
 
   const [sats, setSats] = useState([])
   
-  const [idProduct, setIdProduct] = useState([])
+  
 
   
   useEffect(() => {
@@ -34,9 +34,17 @@ const Satellites = () => {
         {sats ? sats.map((buses, i) =>(
             <div className="col-md-4 padding_leri mt-5 mb-4 shadow-sm p-3 mb-5 rounded cont-product cont-all" key={i} >
             <div className="product-box text-center" >
-               <figure><img className="product-img" src={buses.img} alt="#"/></figure>
-               <h3>{buses.title}</h3>
-               <Link to="/product" className='seemore mt-4'>See more</Link>
+              <figure><img className="product-img" src={buses.img} alt="#"/></figure>
+              <h3>{buses.title}</h3>
+              <h3>{buses.id}</h3>
+              
+              <Link to="/product"
+                state={
+                  {id: buses.id}
+                }
+                className='seemore mt-4'>
+                  See more
+              </Link>
                
             </div>
          </div>

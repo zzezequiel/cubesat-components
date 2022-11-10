@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from "../../assets/img/satellite-svgrepo-com.svg"
+
 
 
  const Footer = () => {
@@ -9,7 +11,7 @@ import { Link } from 'react-router-dom'
     <p className="col-md-4 mb-0 text-muted">Cubesat ZZ</p>
 
     <Link to="/" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-    <img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="55px" alt="#" />
+    <img src={logo} height="75px" alt="#" />
     </Link>
 
     <ul className="nav col-md-4 justify-content-end">

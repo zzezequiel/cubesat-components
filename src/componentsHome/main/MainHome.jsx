@@ -2,30 +2,36 @@ import React from 'react'
 import icon1 from "../../assets/img/code-working-sharp.svg"
 import icon2 from "../../assets/img/web-svgrepo-com.svg"
 import conect from "../../assets/img/conect.jpg"
-import { Link, Outlet } from 'react-router-dom'
+import logo from "../../assets/img/satellite-svgrepo-com.svg"
+import { Link} from 'react-router-dom'
+import BannerHome from '../banner/BannerHome'
 
 const MainHome = () => {
   return (
+    <>
+  
     <main className='backgorundHome'>
+    
       <div className='container mt-5'>
-        <div className='row '>
-          <div className='col text-center mb-5'>
-            <h1>CubeSat ZZ</h1>
+        <div className='row mb-5'>
+          <div className='col'>
+          <BannerHome />
           </div>
-        </div>
-        <div className='row'>
-          <div className='col text-center'>
-          <h2>Global IoT connectivity to monitor assets through our satellites and nodes</h2>
-          </div>
-        </div>
-        <div className='row  mt-4'>
-          <div className='col mb-5 text-center'>
+          <div className='col text-center mt-5'>
+            <h1 className='mb-4'>CubeSat ZZ</h1>
+            <h2>Global IoT connectivity to monitor assets through our satellites and nodes</h2>
             <h2>Enjoy low-power global IoT Connectivity, to monitor assets remotely</h2>
           </div>
         </div>
+        
         <div className='row mt-5'>
           <div className='col'>
-            <div className='container'>
+            <div className='container mt-5'>
+              <div className='row'>
+                <div className='col text-center'>
+                  <h2>Specials</h2>
+                </div>
+              </div>
               <div className='row'>
                 <div className='col'>
                   <div className='row'>
@@ -131,7 +137,7 @@ const MainHome = () => {
             <p className="col-md-4 mb-0 text-white mt-5">Cubesat ZZ</p>
 
             <Link to="index.html" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto mt-5">
-            <img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="65px" alt="#" />
+            <img src={logo} height="85px" alt="#" />
             </Link>
 
             <ul className="nav col-md-4 justify-content-end mt-5">
@@ -149,7 +155,7 @@ const MainHome = () => {
     </main>
     
 
-    
+    </>
   )
 }
 

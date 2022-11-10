@@ -1,5 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 import React, { memo } from 'react'
+import logo from "../assets/img/satellite-svgrepo-com.svg"
+
 
  const TopNav = () => {
   return (
@@ -12,7 +14,7 @@ import React, { memo } from 'react'
                      <div className="full">
                         <div className="center-desk">
                            <div className="logo">
-                              <Link to="index.html"><img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="65px" alt="#" /></Link>
+                              <Link to="index.html"><img src={logo} height="75px" alt="#" /></Link>
                            </div>
                         </div>
                      </div>

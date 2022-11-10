@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Footer from './components/footer/Footer';
+import logo from "./assets/img/satellite-svgrepo-com.svg"
+
 
 
 const Contact = () => {
@@ -27,7 +29,7 @@ const Contact = () => {
     <div className='container'>
       <div className='row d-flex justify-content-center'>
         <div className='col-md-5 text-center'>
-        <img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="110px" alt="#" className='mt-5'/>
+        <img src={logo} height="110px" alt="logo" className='mt-5'/>
         <h1>Contact</h1>
           <form>
             <div className='d-flex justify-content-between'>

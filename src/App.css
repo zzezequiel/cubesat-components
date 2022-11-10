@@ -286,7 +286,11 @@ margin: 8px;
   align-items: center;
   background-size: 100% 100%;
 }
+.banner_home{
 
+  height: 67vh;
+  width: 50vw;
+}
 .text-bg {
   text-align: center;
   padding-bottom: 50px;
@@ -499,4 +503,11 @@ font-size: 100PX;
 .checkbox-contact{
   font-size: 10px;
   line-height:1rem;
+}
+
+
+/*Product*/
+
+.bg-back{
+  background-color:  rgba(180, 180, 185, 0.803);
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from "../assets/img/satellite-svgrepo-com.svg"
 
 const FromSingIn = () => {
 
@@ -23,7 +24,7 @@ const errorMessage = validate(email, password, confirm_password);
     <div className='container'>
       <div className='row d-flex justify-content-center'>
         <div className='col-md-5 text-center'>
-        <img src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/CubeSat/logoprincipal.png" height="110px" alt="#" className='mt-5'/>
+        <img src={logo} height="110px" alt="#" className='mt-5'/>
         <h1>Register</h1>
           <form>
             <input 
@@ -48,7 +49,7 @@ const errorMessage = validate(email, password, confirm_password);
             onChange={onInputChange}
             />
             <input 
-            type="num"
+            type="number"
             className='form-control mt-4'
             name='tel'
             placeholder='Your TEL'
