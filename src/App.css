@@ -509,5 +509,22 @@ font-size: 100PX;
 /*Product*/
 
 .bg-back{
-  background-color:  rgba(180, 180, 185, 0.803);
+  background-color: #F7F7F7;
+
+}
+.cont-img-product {
+  background-color: #F7F7F7;
+
+}
+.space-line{
+  white-space: pre-line;
+  text-justify: inter-word;
+}
+.cont-li-product{
+  white-space: pre-line;
+  list-style: circle;
+
+}
+.img-carousel{
+  height: 550px;
 }

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import fetchData from '../../api/Api'
 
 
-const url = "http://localhost:3000/dataSatbuses";
+const url = "http://localhost:4000/dataSatbuses";
 
 const Satellites = () => {
 
@@ -40,7 +40,9 @@ const Satellites = () => {
               
               <Link to="/product"
                 state={
-                  {id: buses.id}
+                  {id: buses.id,
+                  title: buses.title}
+                  
                 }
                 className='seemore mt-4'>
                   See more
