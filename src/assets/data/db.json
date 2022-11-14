@@ -198,7 +198,17 @@
             }
         ]
        }
+    ],
+    "users" : [
+        {
+            "id" : "1",
+            "name" : "Ezequiel",
+            "lastName" : "Zvirgzdins",
+            "email" : "Ezequiel@hotmail.com",
+            "Location" : "Arg",
+            "addres" : "fake addres 11",
+            "phone" : 123456789
+        }
     ]
-
 }
-    
+

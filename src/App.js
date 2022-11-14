@@ -1,8 +1,9 @@
-import './Home.css';
 import React from 'react'
-import  TopNav  from './Top/TopNav';
+import './ui/styles/App.css';
+
 import Router from './routes/Router';
 import {BrowserRouter} from "react-router-dom"
+import TopNav from './ui/views/components/Top/TopNav';
 
 
 
@@ -12,7 +13,7 @@ function App() {
     <>
     <BrowserRouter>
 
-      <TopNav />
+     <TopNav />
       <Router />
 
     </BrowserRouter>

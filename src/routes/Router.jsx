@@ -1,12 +1,18 @@
 import React from 'react'
-import About from '../About';
-import Contact from '../Contact';
-import Subsystems from '../Subsystems';
 import { Routes, Route, Navigate} from "react-router-dom"
-import SatBuses from '../SatBuses';
-import MainHome from '../componentsHome/main/MainHome';
-import DetailProduct from '../componentsSat/productPage/DetailProduct';
-import SingIn from '../SingIn';
+
+
+import Login from '../ui/views/pages/Login';
+import SingIn from '../ui/views/pages/SingIn';
+
+import MainHome from '../ui/views/pages/MainHome';
+import About from '../ui/views/pages/About';
+import Contact from '../ui/views/pages/Contact';
+
+import Subsystems from '../ui/views/pages/Subsystems';
+import SatBuses from '../ui/views/pages/SatBuses';
+
+import DetailProduct from '../ui/views/pages/DetailProduct';
 
 const Router = () => {
   return (
@@ -19,6 +25,7 @@ const Router = () => {
                 <Route path="/satbuses" element={<SatBuses />}></Route>
                 <Route path="/product" element={<DetailProduct />}></Route>
                 <Route path="/singin" element={<SingIn />}></Route>
+                <Route path="/login" element={<Login />}></Route>
                 <Route path="/*" element={<Navigate replace to="/" />}></Route>
         </Routes>
         </>

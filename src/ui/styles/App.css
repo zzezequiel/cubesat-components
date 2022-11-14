@@ -1,0 +1,531 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/*  BODY SECTION */
+
+
+* {
+     box-sizing: border-box !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: #666666;
+     font-size: 14px;
+     font-family: 'Source Code Pro', sans-serif;
+     line-height: 1.80857;
+     font-weight: normal;
+}
+
+a {
+     color: #1f1f1f;
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: #111111;
+     margin: 0
+}
+
+h1 {
+     font-size: 33px;
+     font-family: 'Source Code Pro', cursive;
+}
+
+h2 {
+     font-size: 22px;
+     font-family: 'Source Code Pro', cursive;
+}
+
+h3 {
+     font-size: 18px;
+     font-family: 'Source Code Pro', cursive;
+}
+
+h4 {
+     font-size: 16px
+}
+
+h5 {
+     font-size: 14px
+}
+
+h6 {
+     font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+     color: #212121;
+     text-decoration: none!important;
+     opacity: 1
+}
+
+button:focus {
+     outline: none;
+}
+
+ul,
+li,
+ol {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+}
+
+p {
+     margin: 0px;
+     font-weight: 300;
+     font-size: 15px;
+     line-height: 24px;
+}
+
+a {
+     color: #222222;
+     text-decoration: none;
+     outline: none !important;
+}
+
+a,
+.btn {
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+
+
+ :focus {
+     outline: 0;
+}
+
+.btn-custom {
+     margin-top: 20px;
+     background-color: transparent !important;
+     border: 2px solid #ddd;
+     padding: 12px 40px;
+     font-size: 16px;
+}
+
+.cont-product{
+width: 30%;
+margin: 8px;
+
+}
+.product-box {
+  background-color: #F7F7F7;
+  width: 100%;
+  
+}
+.product-img {
+  width: 55%;
+  height: 55%;
+}
+
+.lead {
+     font-size: 18px;
+     line-height: 30px;
+     color: #767676;
+     margin: 0;
+     padding: 0;
+}
+
+.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+     border: none !important;
+}
+
+.badge {
+     font-weight: 500;
+}
+
+
+
+/* HEADER SECTION */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.nav-link {
+  color: black;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.navigation.navbar {
+  float: right;
+  padding: 0px;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link {
+  padding: 0 25px;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link:focus,
+.navigation.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f6d601;
+}
+
+.navigation.navbar-dark .navbar-nav .active>.nav-link,
+.navigation.navbar-dark .navbar-nav .nav-link.active,
+.navigation.navbar-dark .navbar-nav .nav-link.show,
+.navigation.navbar-dark .navbar-nav .show>.nav-link {
+  color: #f6d601;
+}
+
+.navbar-expand-md .navbar-nav {
+  padding-right: 10px;
+}
+
+.sign_btn a {
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  color: #000;
+  font-size: 17px;
+}
+
+.sign_btn a:hover {
+  color: #fff;
+}
+.top-contact{
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+.top-contact:hover{
+  color: #fff;
+  
+}
+/** banner section **/
+
+.banner_main {
+  background: url(https://gisgeography.com/wp-content/uploads/2022/04/CubeSat-Feature.png);
+  background-repeat: no-repeat;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+}
+.banner_home{
+
+  height: 67vh;
+  width: 50vw;
+}
+.text-bg {
+  text-align: center;
+  padding-bottom: 50px;
+  background-color: rgba(8, 8, 15, 0.397);
+  border-radius: 50px;
+
+}
+
+.text-bg h1 {
+  color: #f6d601;
+  font-size: 67px;
+  line-height: 90px;
+  padding-bottom: 35px;
+  font-weight: bold;
+  opacity: 100%;
+}
+
+.text-bg strong {
+  font-family: 'Source Code Pro', cursive;
+  font-size: 40px;
+  line-height: 50px;
+  color: #f6d601;
+  padding-bottom: 10px;
+  display: block;
+}
+
+
+
+.text-bg a {
+  font-family: 'Source Code Pro', cursive;
+  font-size: 17px;
+  background-color: #fff;
+  color: #000;
+  padding: 13px 0px;
+  width: 100%;
+  max-width: 190px;
+  text-align: center;
+  display: inline-block;
+  transition: ease-in all 0.5s;
+}
+
+.text-bg a:hover {
+  background-color: #f6d601;
+  color: #000;
+  transition: ease-in all 0.5s;
+  border-radius: 26px;
+}
+
+.titlepage {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.titlepage h2 {
+  font-size: 45px;
+  color: #3e3e3e;
+  line-height: 50px;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.d_flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* products */
+
+.cont-all{
+background-color: #F7F7F7;
+
+}
+.cont-quantity{
+  width: 100%;
+
+}
+.quantity {
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 0 10px 0 10px ;
+  
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+.quantity:hover{
+  color: #fff;
+}
+
+/*Cart*/
+.cart-product-img{
+  width: 48px;
+  height: 48px;
+}
+
+
+div .add-to-cart {
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+.add-to-cart:hover {
+  color: #fff;
+}
+
+.checkout {
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+
+.checkout:hover {
+  color: #fff;
+}
+
+.delete-all:hover{
+  color: #fff;
+
+}
+.delete-all{
+  background-color: rgb(220,53,69) ;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+/*SAT*/
+
+
+.box iframe {
+  
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: moveX 15s linear 0s infinite alternate, moveY 15.5s linear 0s infinite alternate;
+  -moz-animation: moveX 15s linear 0s infinite alternate, moveY 15.5s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: 100%; }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: 100%; }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: 100%; }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: 100%; }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 400%; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: 400%; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: 400%; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 400%; }
+}
+
+
+
+
+
+/*BUSES SAT*/
+
+.buses-title{
+font-size: 100PX;
+}
+.seemore {
+  background-color: #f6d601;
+  display: inline-block;
+  padding: 7px 35px;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+.seemore:hover {
+  color: #fff;
+}
+
+
+
+/*Contact*/
+.message-contact{
+  height: 150px;
+}
+.checkbox-block{
+  
+}
+.checkbox-contact{
+  font-size: 10px;
+  line-height:1rem;
+}
+
+
+/*Product*/
+
+.bg-back{
+  background-color: #F7F7F7;
+
+}
+.cont-img-product {
+  background-color: #F7F7F7;
+
+}
+.space-line{
+  white-space: pre-line;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.cont-li-product{
+  white-space: pre-line;
+  list-style: circle;
+
+}
+.img-carousel{
+  height: 550px;
+}
