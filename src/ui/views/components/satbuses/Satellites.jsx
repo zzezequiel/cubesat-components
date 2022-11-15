@@ -38,19 +38,14 @@ const Satellites = () => {
               <h3>{buses.title}</h3>
               <h3>{buses.id}</h3>
               
-              <Link to="/product"
-                state={
-                  {id: buses.id,
-                  title: buses.title}
-                  
-                }
+              <Link to={`/satbuses/${buses.id}`}            
                 className='seemore mt-4'>
                   See more
               </Link>
                
             </div>
          </div>
-        )) : "no buses"}
+        )): "no buses"}
         </div>
     </div>
     </>

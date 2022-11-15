@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import fetchData from '../../../api/Api'
 import { Link } from 'react-router-dom'
@@ -9,13 +9,13 @@ import Footer from '../components/footer/Footer';
 const url = "http://localhost:4000/dataSatbuses";
 
 const DetailProduct = () => {
-  const location = useLocation();
+ // const location = useLocation();
 
-  const id = location.state?.id;
+  //const id = location.state?.id;
 
   const [sats, setSats] = useState([])
 
-  
+  const {productId} = useParams();
   useEffect(() => {
     const response = async ()=> {
     const data = await fetchData(url);
@@ -26,7 +26,7 @@ const DetailProduct = () => {
   }, [url])
 
 
-  const sat = sats.filter((satellite) => satellite.id === id);
+  const sat = sats.filter((satellite) => satellite.id == productId);
  
 
   return (

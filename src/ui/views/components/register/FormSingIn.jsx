@@ -1,26 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useReducer } from 'react'
 import logo from "../../../img/satellite-svgrepo-com.svg"
 
+const initialState = {
+  name: '',
+  lastName: '',
+  email: '',
+  password: '',
+  address: '',
+  postalCode: '',
+  tel: ''
+ 
+  }
+  const reducer = (user, action) => {
+    switch (action.type) {
+      case 'CH_EMAIL': {
+        return {
+          ...user,
+          email: action.value
+        }
+      }
+      case 'CH_PASSWORD': {
+        return {
+          ...user,
+          password: action.value
+        }
+      }
+      default:{
+        return initialState
+      }
+    }
+    return user;
+  }
 
 const FromSingIn = () => {
 
-const [formState, setFormState] = useState({
-  username: "Your name",
-  lastName: "Your lastname",
-  email: "Your email",
-  
-});
+const [user, dispatch] = useReducer(reducer, initialState)
 
-const {username, lastName, email, password , confirm_password} = formState;
-
-const onInputChange = ({target}) => {
-const {name, value} = target;
-setFormState({
-  ...formState,
-  [name]: value,
-});
-}
-const errorMessage = validate(email, password, confirm_password);
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      console.log(user)
+    }
   return (
     <div className='container'>
       <div className='row d-flex justify-content-center'>
@@ -31,38 +50,58 @@ const errorMessage = validate(email, password, confirm_password);
             <input 
             type="text"
             className='form-control mt-4'
-            name='username'
+            name='name'
+            value={user.name}
             placeholder='Your name'
-            onChange={onInputChange}
+            onChange={(event)=>{ dispatch({type: 'CH_NAME', value: event.target.value})}}
             />
             <input 
             type="text"
             className='form-control mt-4'
             name='lastName'
+            value={user.lastName}
             placeholder='Your lastname'
-            onChange={onInputChange}
+            onChange={(event)=>{ dispatch({type: 'CH_LASTNAME', value: event.target.value})}}
             />
             <input 
             type="email"
             className='form-control mt-4'
             name='email'
+            value={user.email}
             placeholder='Your email'
-            onChange={onInputChange}
+            onChange={(event)=>{ dispatch({type: 'CH_EMAIL', value: event.target.value})}}
             />
             <input 
             type="number"
             className='form-control mt-4'
             name='tel'
+            value={user.tel}
             placeholder='Your TEL'
-            onChange={onInputChange}
+            onChange={(event)=>{ dispatch({type: 'CH_NUMBER', value: event.target.value})}}
+            />
+            <input 
+            type="text"
+            className='form-control mt-4'
+            name='address'
+            value={user.address}
+            placeholder='Your address'
+            onChange={(event)=>{ dispatch({type: 'CH_ADDRESS', value: event.target.value})}}
+            />
+            <input 
+            type="text"
+            className='form-control mt-4'
+            name='postalCode'
+            value={user.postalCode}
+            placeholder='Your postal code'
+            onChange={(event)=>{ dispatch({type: 'CH_POSTALCODE', value: event.target.value})}}
             />
             <input 
             type="password"
             className='form-control mt-4'
             name='password'
-            
+            value={user.password}
             placeholder="Password"
-            onChange={onInputChange}
+            onChange={(event)=>{ dispatch({type: 'CH_PASSWORD', value: event.target.value})}}
             />
             <input 
             type="password"
@@ -70,23 +109,14 @@ const errorMessage = validate(email, password, confirm_password);
             name='confirm_password'
             
             placeholder="confirm your password"
-
-            onChange={onInputChange}
             />
-            <p>{errorMessage}</p>
+            <p></p>
             <button type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 ">Sign In!</button>
           </form>
         </div>
       </div>  
     </div>
   )
-}
-
-const validate = (email, password, confirm_password) => {
-  //regular expresions
-  if(!email.includes('@')) return 'Wrong email';
-  if(password && password.length < 4) return 'Wrong password';
-  if(password !== confirm_password) return 'Passwords are diferents';
 }
 
 
