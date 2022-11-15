@@ -1,6 +1,11 @@
-import React, { useState, useReducer } from 'react'
+import React, { useReducer, useState, useEffect } from 'react'
 import logo from "../../../img/satellite-svgrepo-com.svg"
-import Validate from '../../utils/context/Validate';
+
+
+import fetchData from '../../../../api/Api'
+import { Link } from 'react-router-dom';
+
+const url = "http://localhost:4000/users";
 
 const initialState = {
 email: '',
@@ -33,8 +38,32 @@ const FormLogin = () => {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log(user)
+      
     }
+
+  const [users, setUsers] = useState([])
+
+    useEffect(() => {
+      const response = async ()=> {
+      const data = await fetchData(url);
+      setUsers(data);
+  
+      }
+      response();
+    }, [url])
+
+    const validation = () => {
+     const loged = users.find((u)=>
+      {return u.email === user.email && u.password === user.password}
+      
+      )
+    return loged
+    }
+    const validationLink = validation()? "/" : "/login"  
+    
+  
+   
+
 
   return (
     <div className='container'>
@@ -66,9 +95,8 @@ const FormLogin = () => {
             
             />
             
-            <Validate 
-            user={user}
-            />
+        <Link to={validationLink}><button type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " onClick={validation}>Log in</button></Link>
+            
           </form>
         </div>
       </div>  

@@ -318,6 +318,7 @@
     "users" : [
         {
             "id" : "1",
+            "password" : "0000",
             "name" : "Ezequiel",
             "lastName" : "Zvirgzdins",
             "email" : "Ezequiel@hotmail.com",
