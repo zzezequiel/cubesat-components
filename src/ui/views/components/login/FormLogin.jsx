@@ -47,7 +47,6 @@ const FormLogin = () => {
       const response = async ()=> {
       const data = await fetchData(url);
       setUsers(data);
-  
       }
       response();
     }, [url])
@@ -55,8 +54,8 @@ const FormLogin = () => {
     const validation = () => {
      const loged = users.find((u)=>
       {return u.email === user.email && u.password === user.password}
-      
       )
+    
     return loged
     }
     const validationLink = validation()? "/" : "/login"  
@@ -68,7 +67,7 @@ const FormLogin = () => {
   return (
     <div className='container'>
       <div className='row d-flex justify-content-center'>
-        <div className='col-md-5 text-center'>
+        <div className='col text-center'>
         <img src={logo} height="110px" alt="#" className='mt-5'/>
         <h1>Access to your account</h1>
           <form onSubmit={handleSubmit}>
@@ -95,7 +94,7 @@ const FormLogin = () => {
             
             />
             
-        <Link to={validationLink}><button type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " onClick={validation}>Log in</button></Link>
+        <Link to={validationLink}><button type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " data-bs-dismiss="modal" onClick={validation}>Log in</button></Link>
             
           </form>
         </div>
