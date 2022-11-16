@@ -20,7 +20,7 @@ const MainHome = () => {
           <BannerHome />
           </div>
           <div className='col text-center mt-5'>
-            <h1 className='mb-4'>CubeSat ZZ</h1>
+            <h1 className='mb-4'>ZZAT</h1>
             <h2>Global IoT connectivity to monitor assets through our satellites and nodes</h2>
             <h2>Enjoy low-power global IoT Connectivity, to monitor assets remotely</h2>
           </div>

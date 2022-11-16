@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import logo from "../../img/satellite-svgrepo-com.svg"
 import Footer from '../components/footer/Footer';
-
+import {session} from '../utils/session/session'
 
 
 
 const Contact = () => {
-
+console.log(session)
   const [formState, setFormState] = useState({
     username: "Your name",
     lastName: "Your lastname",

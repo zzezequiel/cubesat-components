@@ -74,6 +74,8 @@ const [user, dispatch] = useReducer(reducer, initialState)
       event.preventDefault();
       
       createUser(user);
+
+    
     }
 
     

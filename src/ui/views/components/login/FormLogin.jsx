@@ -3,7 +3,7 @@ import logo from "../../../img/satellite-svgrepo-com.svg"
 
 
 import fetchData from '../../../../api/Api'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const url = "http://localhost:4000/users";
 
@@ -38,7 +38,18 @@ const FormLogin = () => {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      
+      if(validation()){
+        <Navigate to="/" />
+      } else{
+        
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.className = "text-danger";
+
+      setTimeout(() => {
+      errorMessage.className = "d-none";
+        
+      }, 2000);
+    }
     }
 
   const [users, setUsers] = useState([])
@@ -55,15 +66,19 @@ const FormLogin = () => {
      const loged = users.find((u)=>
       {return u.email === user.email && u.password === user.password}
       )
-    
-    return loged
-    }
-    const validationLink = validation()? "/" : "/login"  
-    
-  
-   
+      if(loged){
+      sessionStorage.setItem("userSession", JSON.stringify(user.email));
+        return loged
+      }else{
+        return false
+      }  
+      }
 
-
+      //must add a var that get the current url
+    
+    const validationClose = validation()? "modal" : ""   
+    
+ 
   return (
     <div className='container'>
       <div className='row d-flex justify-content-center'>
@@ -93,10 +108,11 @@ const FormLogin = () => {
             required
             
             />
-            
-        <Link to={validationLink}><button type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " data-bs-dismiss="modal" onClick={validation}>Log in</button></Link>
+            <input type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " data-bs-dismiss={validationClose} onClick={validation} value='log in '/>
+        
             
           </form>
+          <div id='errorMessage' className='d-none' >login incorrecto</div>
         </div>
       </div>  
     </div>

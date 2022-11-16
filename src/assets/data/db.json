@@ -294,36 +294,24 @@
   ],
   "users": [
     {
-      "id": "1",
-      "password": "0000",
       "name": "Ezequiel",
       "lastName": "Zvirgzdins",
-      "email": "Ezequiel@hotmail.com",
-      "Location": "Arg",
-      "addres": "fake addres 11",
+      "email": "Ezequiel@hotmail.com.ar",
+      "password": "0000",
+      "address": "fake address 123",
       "postalCode": "08015",
-      "phone": 123456789
+      "tel": "99999999",
+      "id": "Vm7_tvE"
     },
     {
       "name": "Ezequiel",
       "lastName": "Zvirgzdins",
       "email": "EzequielZvirgzdins@gmail.com",
-      "password": "4444",
+      "password": "aaaaa",
       "address": "Carrer marques de campo sagrado, 28, 6-1",
       "postalCode": "08015",
-      "tel": "4444",
-      "id": "wcBCzTO"
-    },
-    {
-      "name": "duki",
-      "lastName": "modo diablo",
-      "email": "duki@hotmail.com",
-      "password": "aaaa",
-      "address": "fake address",
-      "postalCode": "5665656",
-      "tel": "111111",
-      "id": "1SOoofz"
+      "tel": "11111",
+      "id": "ZPbEJXl"
     }
-    
   ]
 }
