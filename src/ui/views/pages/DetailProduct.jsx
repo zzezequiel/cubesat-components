@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import fetchData from '../../../api/Api'
 import { Link } from 'react-router-dom'
 import Footer from '../components/footer/Footer';
+import Carousel from 'react-bootstrap/Carousel';
+
 
 
 const url = "http://localhost:4000/dataSatbuses";
@@ -131,24 +133,13 @@ const DetailProduct = () => {
             
             
             <div className='cont-img-product col p-5'>
-              <div id="carouselExampleInterval" className="carousel carousel-dark  slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
+            <Carousel>
               {s.carousel.map((c)=>(
-                  <div className="carousel-item active" data-bs-interval="5000">
+                  <Carousel.Item interval={3000}>
                     <img src={c} className="d-block w-100 img-carousel" />
-                  </div>
-                  
+                  </Carousel.Item>
                   ))}
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
-              </div>
+            </Carousel>
               
               <div>
                 <Link to="/contact" className='sign_btn mt-5 top-contact'>Contact</Link>

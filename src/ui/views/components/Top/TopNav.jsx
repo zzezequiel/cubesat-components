@@ -59,14 +59,14 @@ import FromSingIn from '../register/FormSingIn'
                               <div className="modal-content">
                                  <div className="modal-header text-center">
                                     <h1 className="modal-title fs-5" id="exampleModalToggleLabel">Welcom to ZZAT</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                  </div>
                                  <div className="modal-body d-flex align-items-center flex-sm-column">
                                  <img src={logo} height="110px" alt="#" className=''/>
 
                                  <div className='row mt-5 m-2'>
                                     <Link to="/singin" className="top-contact btn sign-link text-center" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" >
-                                       Sign in!
+                                       Sign un!
                                     </Link>
                                  </div>
                                  <div className='row m-2'>
@@ -76,41 +76,39 @@ import FromSingIn from '../register/FormSingIn'
                                  </div>
                                  </div>
                                  <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" className="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
                                  </div>
                               </div>
                            </div>
                         </div>
 
-                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                 <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                           <div className="modal-dialog modal-dialog-centered">
+                              <div className="modal-content">
+                                 <div className="modal-header">
+                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                  </div>
-                                 <div class="modal-body">
+                                 <div className="modal-body">
                                     <FromSingIn />
                                  </div>
-                                 <div class="modal-footer">
-                                 <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                                 <div className="modal-footer">
+                                 <button className="btn btn-outline-warning" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">⇇</button>
                                  </div>
                               </div>
                            </div>
                         </div>
 
-                        <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
-                           <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                 <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Modal 2</h1>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                           <div className="modal-dialog modal-dialog-centered">
+                              <div className="modal-content">
+                                 <div className="modal-header">
+                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                  </div>
-                                 <div class="modal-body">
+                                 <div className="modal-body">
                                  <FormLogin />
                                  </div>
-                                 <div class="modal-footer">
-                                 <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                                 <div className="modal-footer">
+                                 <button className="btn btn-outline-warning" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">⇇</button>
                                  </div>
                               </div>
                            </div>

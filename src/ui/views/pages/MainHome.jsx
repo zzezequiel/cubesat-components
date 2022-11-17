@@ -11,14 +11,12 @@ import BannerHome from '../components/home/banner/BannerHome'
 const MainHome = () => {
   return (
     <>
-  
+
     <main className='backgorundHome'>
-    
+    <BannerHome />
       <div className='container mt-5'>
         <div className='row mb-5'>
-          <div className='col'>
-          <BannerHome />
-          </div>
+          
           <div className='col text-center mt-5'>
             <h1 className='mb-4'>ZZAT</h1>
             <h2>Global IoT connectivity to monitor assets through our satellites and nodes</h2>

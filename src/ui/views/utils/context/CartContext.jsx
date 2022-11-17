@@ -58,6 +58,7 @@ const deleteItemCart = (product) => {
       setCartItems([...cartItems, {...product, amount: 1}])
       } else setCartItems([...cartItems, {...product, amount: count}])
     }
+    
   };
   const deleteItemToCart = (product) => {
     const inCart = cartItems.find(

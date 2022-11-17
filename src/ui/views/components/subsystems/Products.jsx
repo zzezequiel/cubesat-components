@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { Counter } from './counter/Counter.jsx';
 
 
+
 import fetchData from '../../../../api/Api'
 const url = "http://localhost:4000/subsystems";
 
@@ -37,9 +38,15 @@ export const Products = () => {
                   <h3>{product.title}</h3>
                   <h3>Price: {accounting.formatMoney(product.price,{symbol:"€", format:"%v %s"})} €</h3>
                   <Counter />
+
+
+
                   <div className=''>
                    <button className='mt-3 add-to-cart cart ' onClick={()=>addItemToCart(product)}>Add to cart</button>
                   </div>
+                  
+
+
                </div>
             </div>
    )): "error"}

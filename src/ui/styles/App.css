@@ -60,7 +60,7 @@ h6 {
 }
 
 h1 {
-     font-size: 33px;
+     font-size: 45px;
      font-family: 'Source Code Pro', cursive;
 }
 
@@ -284,7 +284,16 @@ margin: 8px;
   
 }
 /** banner section **/
-
+.title-cont{
+  position: absolute;
+  top: 15vh;
+  right: 5vw;
+}
+.description-home {
+  font-size: 40px;
+  width:25vw;
+ 
+}
 .banner_main {
   background: url(https://gisgeography.com/wp-content/uploads/2022/04/CubeSat-Feature.png);
   background-repeat: no-repeat;
