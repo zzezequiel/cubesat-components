@@ -13,6 +13,7 @@ import Subsystems from '../ui/views/pages/Subsystems';
 import SatBuses from '../ui/views/pages/SatBuses';
 
 import DetailProduct from '../ui/views/pages/DetailProduct';
+import DetailComponents from '../ui/views/components/subsystems/DetailComponents';
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/subsystems" element={<Subsystems />}></Route>
+                <Route path="subsystems/:productId" element={<DetailComponents />}></Route>
                 <Route path="/satbuses" element={<SatBuses />}></Route>
                 <Route path="satbuses/:productId" element={<DetailProduct />}></Route>
                 <Route path="/singin" element={<SingIn />}></Route>

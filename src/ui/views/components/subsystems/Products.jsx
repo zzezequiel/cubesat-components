@@ -36,15 +36,19 @@ export const Products = () => {
                <div className="product-box text-center">
                   <figure><img className="product-img" src={product.img} alt="#"/></figure>
                   <h3>{product.title}</h3>
-                  <h3>Price: {accounting.formatMoney(product.price,{symbol:"€", format:"%v %s"})} €</h3>
-                  <Counter />
+                  <h3>Price: {accounting.formatMoney(product.price,{symbol:"€", format:"%v %s"})}</h3>
+                  
 
 
 
                   <div className=''>
                    <button className='mt-3 add-to-cart cart ' onClick={()=>addItemToCart(product)}>Add to cart</button>
                   </div>
-                  
+
+                  <Link to={`/subsystems/${product.id}`}            
+                     className='seemore mt-4'>
+                        See more
+                  </Link>
 
 
                </div>

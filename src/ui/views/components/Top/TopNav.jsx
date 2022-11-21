@@ -1,11 +1,14 @@
 import { Link, Outlet } from 'react-router-dom'
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
 import logo from "../../../img/satellite-svgrepo-com.svg"
 import FormLogin from '../login/FormLogin'
 import FromSingIn from '../register/FormSingIn'
+import { AuthContext } from '../../../../auth/context'
 
 
  const TopNav = () => {
+   const { user, logout } = useContext(AuthContext);
+   console.log(user)
   return (
    <>
     <header>
@@ -44,9 +47,20 @@ import FromSingIn from '../register/FormSingIn'
                                  </ul>
                               </li>
                               <li className='nav-item'>
+                              {user? 
+
+                              <Link type="button" className="nav-link" data-bs-toggle="modal" data-bs-target="#logOut">
+                              LOGGED AS {user.email}
+
+                              </Link>
+                              
+                              :
+                              
                               <Link type="button" className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                                   Registrer or log in
                               </Link>
+                              
+                              }
                                  
                               </li>
                            </ul>
@@ -54,7 +68,7 @@ import FromSingIn from '../register/FormSingIn'
                         </div>
                      </nav>
 
-                        <div className="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
+                        <div className="modal fade" id="exampleModalToggle" tabIndex="-1" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
                            <div className="modal-dialog modal-dialog-centered">
                               <div className="modal-content">
                                  <div className="modal-header text-center">
@@ -82,7 +96,7 @@ import FromSingIn from '../register/FormSingIn'
                            </div>
                         </div>
 
-                        <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
                            <div className="modal-dialog modal-dialog-centered">
                               <div className="modal-content">
                                  <div className="modal-header">
@@ -98,7 +112,7 @@ import FromSingIn from '../register/FormSingIn'
                            </div>
                         </div>
 
-                        <div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                        <div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabIndex="-1">
                            <div className="modal-dialog modal-dialog-centered">
                               <div className="modal-content">
                                  <div className="modal-header">
@@ -113,6 +127,30 @@ import FromSingIn from '../register/FormSingIn'
                               </div>
                            </div>
                         </div>
+
+                                                      {/* LOG OUT */}
+
+                        <div className="modal fade" id="logOut" tabIndex="-1" aria-labelledby="logOutLabel" aria-hidden="true">
+                           <div className="modal-dialog">
+                              <div className="modal-content">
+                                 <div className="modal-header">
+                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div className="modal-body d-flex align-items-center flex-sm-column">
+                                 <img src={logo} height="110px" alt="#" className=''/>
+
+                                 <div className='row mt-5 m-2'>
+                                    <Link to="/singin" className="top-contact btn sign-link text-center" data-bs-dismiss="modal" onClick={logout} >
+                                       Log out  <br/>
+                                       ＞﹏＜
+                                    </Link>
+                                 </div>
+                                 
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                           </div>
 
                   </div>
                </div>

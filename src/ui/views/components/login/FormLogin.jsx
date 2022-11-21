@@ -1,11 +1,11 @@
-import React, { useReducer, useState, useEffect } from 'react'
+import React, { useReducer, useContext } from 'react'
 import logo from "../../../img/satellite-svgrepo-com.svg"
 
 
-import fetchData from '../../../../api/Api'
 import { Link, Navigate } from 'react-router-dom';
+import { AuthContext } from '../../../../auth/context';
 
-const url = "http://localhost:4000/users";
+
 
 const initialState = {
 email: '',
@@ -36,47 +36,30 @@ const reducer = (user, action) => {
 const FormLogin = () => {
     const [user, dispatch] = useReducer(reducer, initialState)
 
+    const {login, close} = useContext(AuthContext);
+
     const handleSubmit = (event) => {
       event.preventDefault();
-      if(validation()){
-        <Navigate to="/" />
-      } else{
-        
-      const errorMessage = document.getElementById('errorMessage');
-      errorMessage.className = "text-danger";
+      login(user);
+          if(close === true){
+            console.log('aaa');
+            <Navigate to="/" />
+          } else{
+              
+          const errorMessage = document.getElementById('errorMessage');
+          errorMessage.className = "text-danger";
 
-      setTimeout(() => {
-      errorMessage.className = "d-none";
-        
-      }, 2000);
+          setTimeout(() => {
+          errorMessage.className = "d-none";
+              
+          }, 2000);
+          }
     }
-    }
-
-  const [users, setUsers] = useState([])
-
-    useEffect(() => {
-      const response = async ()=> {
-      const data = await fetchData(url);
-      setUsers(data);
-      }
-      response();
-    }, [url])
-
-    const validation = () => {
-     const loged = users.find((u)=>
-      {return u.email === user.email && u.password === user.password}
-      )
-      if(loged){
-      sessionStorage.setItem("userSession", JSON.stringify(user.email));
-        return loged
-      }else{
-        return false
-      }  
-      }
+    
 
       //must add a var that get the current url
     
-    const validationClose = validation()? "modal" : ""   
+    const validationClose = close? "modal" : ""   
     
  
   return (
@@ -108,7 +91,7 @@ const FormLogin = () => {
             required
             
             />
-            <input type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " data-bs-dismiss={validationClose} onClick={validation} value='log in '/>
+            <input type='submit' className="top-contact btn p-2 pt-1 px-5 mt-4 " data-bs-dismiss={validationClose} value='log in '/>
         
             
           </form>

@@ -106,6 +106,7 @@ const MainHome = () => {
             </div>
           </div>
       </div>
+
       <div className='bg-buy pt-5'>
           <div className='container pb-5 pt-5'>
             <div className='row '>
@@ -127,6 +128,19 @@ const MainHome = () => {
           </div>
       </div>
       
+{/* 
+      <div>
+        <div>
+          <div className='row'>
+            <div><h1></h1></div>
+          </div>
+          <div className='row d-flex justify-content-between'>
+            <div><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png' className='img-organizations' /></div>
+            <div><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/ESA_logo.svg/2560px-ESA_logo.svg.png' className='img-organizations'/></div>
+            <div><img src='' className='img-organizations'/></div>
+          </div>
+        </div>
+      </div> */}
 
 
 
