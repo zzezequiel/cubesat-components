@@ -4,6 +4,7 @@ import { AuthContext } from './AuthContext';
 import { AuthReducer } from './AuthReducer';
 import validation from './Validation'
 import fetchData from '../../api/Api'
+import { First } from 'react-bootstrap/esm/PageItem';
 
 const url = "http://localhost:4000/users";
 
@@ -12,7 +13,7 @@ export const AuthProvider = ({ children }) => {
   
 
   const init = () => {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(sessionStorage.getItem('userSession'));
     return {
       isLogged: !!user,
       user,
@@ -35,18 +36,24 @@ export const AuthProvider = ({ children }) => {
 
   const login =  (user) => {
    if(user){
-        const loged =  users.find((u) =>
-            {return u.email === user.email && u.password === user.password}
+        const logged =  users.find((u) =>
+
+            {if(u.email === user.email && u.password === user.password){
+              return u;
+            }}
+
             )
-            console.log(loged)
-        if(loged){
-            sessionStorage.setItem("userSession", JSON.stringify(user.email));
+            
+        if(logged){
+          
+            setClose(true)
+          
+            sessionStorage.setItem("userSession", JSON.stringify(logged));
             dispatch({
                 type: types.login,
                 payload: user,
             });
             
-            setClose(true)
         }else{
             setClose(false)
         }  

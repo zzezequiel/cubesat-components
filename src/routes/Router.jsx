@@ -14,21 +14,28 @@ import SatBuses from '../ui/views/pages/SatBuses';
 
 import DetailProduct from '../ui/views/pages/DetailProduct';
 import DetailComponents from '../ui/views/components/subsystems/DetailComponents';
+import Checkout from '../ui/views/pages/Checkout';
+import RestrictedRoute from './RestrictedRoute';
 
 const Router = () => {
   return (
     <>
         <Routes>
-                <Route path="/" element={<MainHome />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="/contact" element={<Contact />}></Route>
-                <Route path="/subsystems" element={<Subsystems />}></Route>
-                <Route path="subsystems/:productId" element={<DetailComponents />}></Route>
-                <Route path="/satbuses" element={<SatBuses />}></Route>
-                <Route path="satbuses/:productId" element={<DetailProduct />}></Route>
+                  <Route path="/" element={<MainHome />}></Route>
+                  <Route path="/about" element={<About />}></Route>
+                  <Route path="/contact" element={<Contact />}></Route>
+                  <Route path="/subsystems" element={<Subsystems />}></Route>
+                  <Route path="subsystems/:productId" element={<DetailComponents />}></Route>
+                  <Route path="/satbuses" element={<SatBuses />}></Route>
+                  <Route path="satbuses/:productId" element={<DetailProduct />}></Route>
+
+                  <Route path="/*" element={<Navigate replace to="/" />}></Route>
+
+                
+                <Route path='/checkout' element={
+                <RestrictedRoute><Checkout /></RestrictedRoute>} ></Route>
                 <Route path="/singin" element={<SingIn />}></Route>
                 <Route path="/login" element={<Login />}></Route>
-                <Route path="/*" element={<Navigate replace to="/" />}></Route>
         </Routes>
         </>
   )

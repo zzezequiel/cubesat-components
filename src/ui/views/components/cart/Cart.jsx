@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import { AuthContext } from '../../../../auth/context';
 
 
 const Cart = () => {
@@ -16,6 +17,7 @@ const Cart = () => {
   const [productsLength, setProductsLength] = useState(0);
 
 const { cartItems, deleteAllCart } = useContext(CartContext);
+const { user } = useContext(AuthContext)
 
 useEffect(() => {
   setProductsLength(
@@ -28,6 +30,10 @@ useEffect(() => {
 const total = cartItems.reduce(
   (prev,current)=> prev + current.amount * current.price, 0
 );
+const [error, setError] = useState('');
+const errorMessage = () => {
+ setError('Must login before chekout');
+}
 
   return (
                 <div className='sticky-top text-end mx-5'>
@@ -101,10 +107,17 @@ const total = cartItems.reduce(
                             </OverlayTrigger>
                           </div>
                           <div className=''>
-                            <Link to="/singin" className="btn p-2 pt-1 px-5 ">
-                                  <p className='checkout '>Checkout</p>
-                            </Link>
+                            {user?
+                            <Link to="/checkout" className="btn p-2 pt-1 px-5 " >
+                                <p className='checkout '>Checkout</p>
+                            </Link>  
+                            :
+                            <Link className="btn p-2 pt-1 px-5 " onClick={errorMessage}>
+                                <p className='checkout '>Checkout</p>
+                            </Link> 
+                          }
                           </div>
+                          <p className='text-danger mt-2'>{error}</p>
                         </div>
                         </Modal.Body>
                       </Modal>

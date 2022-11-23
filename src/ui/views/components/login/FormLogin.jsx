@@ -41,10 +41,10 @@ const FormLogin = () => {
     const handleSubmit = (event) => {
       event.preventDefault();
       login(user);
-          if(close === true){
-            console.log('aaa');
+          if(close == true){
+            console.log('true???');
             <Navigate to="/" />
-          } else{
+          } else if (close === false){
               
           const errorMessage = document.getElementById('errorMessage');
           errorMessage.className = "text-danger";
