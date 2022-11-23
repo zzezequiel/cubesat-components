@@ -34,6 +34,7 @@ const [error, setError] = useState('');
 const errorMessage = () => {
  setError('Must login before chekout');
 }
+console.log(cartItems, 'cart')
 
   return (
                 <div className='sticky-top text-end mx-5'>
@@ -80,8 +81,8 @@ const errorMessage = () => {
                         ):(
                             <div>
 
-                              {cartItems.map((item, i)=>(
-                                <ItemCart key={i} item={item} />
+                              {cartItems.map((item)=>(
+                                <ItemCart key={item.id} item={item} />
                               ))}
 
                               
@@ -108,13 +109,17 @@ const errorMessage = () => {
                           </div>
                           <div className=''>
                             {user?
-                            <Link to="/checkout" className="btn p-2 pt-1 px-5 " >
+                            <Link 
+                              to="/checkout" 
+                              className="btn p-2 pt-1 px-5 " 
+                              
+                            >
                                 <p className='checkout '>Checkout</p>
                             </Link>  
                             :
-                            <Link className="btn p-2 pt-1 px-5 " onClick={errorMessage}>
+                            <div className="btn p-2 pt-1 px-5 " onClick={errorMessage}>
                                 <p className='checkout '>Checkout</p>
-                            </Link> 
+                            </div> 
                           }
                           </div>
                           <p className='text-danger mt-2'>{error}</p>

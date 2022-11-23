@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom'
 import {satsBuses} from '../../../../api/Api'
 
 
-const url = "http://localhost:4000/dataSatbuses";
 
 const Satellites = () => {
 const {data: sats, error, isLoading} = useQuery(['sats'], satsBuses)

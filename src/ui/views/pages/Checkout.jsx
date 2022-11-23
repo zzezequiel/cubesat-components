@@ -4,9 +4,12 @@ import { AuthContext, AuthProvider } from '../../../auth/context'
 import { CartContext } from '../utils/context/CartContext'
 import ProductsCheckout from '../components/checkout/ProductsCheckout'
 import UserShippingData from '../components/checkout/UserShippingData'
+import CompTest from '../components/checkout/compTest'
 
 const Checkout = () => {
 const {cartItems} = useContext(CartContext)
+console.log(cartItems, 'checkout')
+
 
   return (
 
@@ -15,15 +18,9 @@ const {cartItems} = useContext(CartContext)
                 <Link className='ms-5 ps-5 p-3' to='/subsystems'> ⇇ BACK TO ALL PLATFORMS</Link>
             </div>
             {cartItems.length != 0?
-                    <div className='d-flex container'>
-                        
-                        <div className='col-sm-4'>
-                            <UserShippingData />
-                        </div>
-                        <div className='col-sm-8'>
-                            <ProductsCheckout />
-                        </div>
-                    </div>
+
+
+                   <CompTest />
             
         :
                     <div className='container text-center mt-5'>

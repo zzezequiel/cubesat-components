@@ -5,13 +5,12 @@ import ItemCart from '../cart/itemCart/ItemCart';
 const ProductsCheckout = () => {
     
     const {cartItems} = useContext(CartContext);
-    console.log(cartItems);
   return (
 
     <div className='container mt-4'>
         <div><h3>Your CART</h3></div>
-        {cartItems.map((item, i)=>(
-                <ItemCart key={i} item={item} />
+        {cartItems.map((item)=>(
+                <ItemCart key={item.id} item={item} />
         ))}
     </div>
   )

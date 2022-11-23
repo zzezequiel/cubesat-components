@@ -4,7 +4,6 @@ import { CartContext } from '../ui/views/utils/context/CartContext'
 
 const RestrictedRoute = ({children}) => {
     const {cartItems} = useContext(CartContext)
-    console.log(cartItems)
   return (
     
     

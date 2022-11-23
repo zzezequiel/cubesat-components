@@ -30,7 +30,7 @@ export const subsystems = async () => {
       export const satsBuses = async () => {
     
         try {
-            const response = await fetch(`${url}/subsystems`);
+            const response = await fetch(`${url}/dataSatbuses`);
             const data = await response.json();
             return data;
            

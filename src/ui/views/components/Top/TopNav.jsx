@@ -8,7 +8,6 @@ import { AuthContext } from '../../../../auth/context'
 
  const TopNav = () => {
    const { user, logout } = useContext(AuthContext);
-   console.log(user)
   return (
    <>
     <header>

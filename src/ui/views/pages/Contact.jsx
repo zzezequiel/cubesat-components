@@ -85,7 +85,6 @@ const initialState = {
 const Contact = () => {
   
   const [user, dispatch] = useReducer(reducer, initialState)
-  console.log(dispatch)
 const [userSession, setUserSession] = useState([])
   useEffect(() => {
     const getUser = async () => {
