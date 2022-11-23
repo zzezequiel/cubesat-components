@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import fetchData from '../../../../api/Api'
+import  { subsystemsByID } from '../../../../api/Api'
 import { Link } from 'react-router-dom'
 import Footer from '../footer/Footer';
 import Carousel from 'react-bootstrap/Carousel';
@@ -9,16 +9,13 @@ import Carousel from 'react-bootstrap/Carousel';
 const url = "http://localhost:4000/subsystems";
 
 const DetailComponents = () => {
- // const location = useLocation();
-
-  //const id = location.state?.id;
 
   const [components, setComponents] = useState([])
 
   const {productId} = useParams();
   useEffect(() => {
     const response = async ()=> {
-    const data = await fetchData(url);
+    const data = await subsystemsByID();
     setComponents(data);
 
     }

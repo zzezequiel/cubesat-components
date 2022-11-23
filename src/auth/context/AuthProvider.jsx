@@ -3,8 +3,9 @@ import { types } from '../types/types';
 import { AuthContext } from './AuthContext';
 import { AuthReducer } from './AuthReducer';
 import validation from './Validation'
-import fetchData from '../../api/Api'
+import fetchData, { usersFetch } from '../../api/Api'
 import { First } from 'react-bootstrap/esm/PageItem';
+import { useQuery } from 'react-query';
 
 const url = "http://localhost:4000/users";
 
@@ -22,15 +23,8 @@ export const AuthProvider = ({ children }) => {
 
   const [authState, dispatch] = useReducer(AuthReducer, {}, init);
 
-  const [users, setUsers] = useState([])
-
-    useEffect(() => {
-      const response = async ()=> {
-      const data = await fetchData(url);
-      setUsers(data);
-      }
-      response();
-    }, [url])
+  const {data: users, error} = useQuery(['users'], usersFetch)
+ 
 
     const [close, setClose] = useState(false)
 

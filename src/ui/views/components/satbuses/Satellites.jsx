@@ -1,34 +1,51 @@
 
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { BallTriangle } from 'react-loader-spinner';
+import {  useQuery } from 'react-query';
 import { Link } from 'react-router-dom'
 
 
-import fetchData from '../../../../api/Api'
+import {satsBuses} from '../../../../api/Api'
 
 
 const url = "http://localhost:4000/dataSatbuses";
 
 const Satellites = () => {
-
-  const [sats, setSats] = useState([])
+const {data: sats, error, isLoading} = useQuery(['sats'], satsBuses)
+  // const [sats, setSats] = useState([])
   
   
 
   
-  useEffect(() => {
-    const response = async ()=> {
-    const data = await fetchData(url);
-    setSats(data);
+  // useEffect(() => {
+  //   const response = async ()=> {
+  //   const data = await fetchData(url);
+  //   setSats(data);
 
-    }
-    response();
-  }, [url])
+  //   }
+  //   response();
+  // }, [url])
 
 
 
   return (
     <>
+    {isLoading?
+      <div className='d-flex justify-content-center p-5 m-5'> 
+         <BallTriangle
+            height={200}
+            width={200}
+            radius={5}
+            color="#000"
+            ariaLabel="ball-triangle-loading"
+            wrapperClass={{}}
+            wrapperStyle=""
+            visible={true}
+      />
+      </div>: null
+   }
+   {error? "Status ERROR in query":null}
     <div className='container mt-5'>
       <div className='row'>
         {sats ? sats.map((buses, i) =>(
