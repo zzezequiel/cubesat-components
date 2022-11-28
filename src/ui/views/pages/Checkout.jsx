@@ -17,6 +17,7 @@ console.log(cartItems, 'checkout')
             <div className='row bg-back'>
                 <Link className='ms-5 ps-5 p-3' to='/subsystems'> ⇇ BACK TO ALL PLATFORMS</Link>
             </div>
+            <h1 className='text-center mt-3'>Checkout</h1>
             {cartItems.length != 0?
 
 

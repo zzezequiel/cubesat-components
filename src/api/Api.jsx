@@ -35,9 +35,9 @@ export const subsystems = async () => {
             return data;
            
         }
-        catch(error) {
+        catch(errr) {
             //declare state for errors
-            <h1>error</h1>
+            <h1>catch</h1>
         }
       }
       export const satsByID = async (satId) => {

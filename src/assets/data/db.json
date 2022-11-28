@@ -189,7 +189,6 @@
       "carousel": [
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product1/EPS-3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511110939",
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product1/EPS-1-1-1024x950-1-rez.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669020960057"
-
       ]
     },
     {
@@ -224,7 +223,6 @@
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product3/EPSS3-4-rez.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669021106890",
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product3/EPSS2-1024x946-3rez.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669021106723",
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product3/EPSS1-1024x946-12222.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669021106715"
-        
       ]
     },
     {
@@ -236,7 +234,6 @@
       "img": "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product4/SatBus-3C2-1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511261610",
       "carousel": [
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product4/SatBus-3C2-1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511261610"
-        
       ]
     },
     {
@@ -278,7 +275,6 @@
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product7/PC1-5-web-2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669041412094",
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product7/Payload-controller-2.0-2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669041412060",
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product7/PC1-5-web-3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1669041411977"
-        
       ]
     },
     {
@@ -344,7 +340,6 @@
       "img": "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product12/S-band-Transceiver-new-500x500.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511714572",
       "carousel": [
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product12/S-band-Transceiver-new-500x500.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511714572"
-        
       ]
     },
     {
@@ -356,7 +351,6 @@
       "img": "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product13/S-Band-Patch-Antenna-new-500x500.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511770252",
       "carousel": [
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product13/S-Band-Patch-Antenna-new-500x500.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511770252"
-        
       ]
     },
     {
@@ -365,11 +359,11 @@
       "title": "CubeSat AIS Receiver",
       "description": "This 4-channel AIS Receiver, “Polaris”, is designed by NanoAvionics’ partner Satlab. Polaris is a fully self-contained software-defined radio receiver for the maritime VHF band, with integrated demodulators for reception of standard and long-range AIS messages.<br>This versatile SDR offers excellent performance given the typical size, weight, and power constraints of a CubeSat – or as an additional payload on larger LEO satellites.<br>Polaris is Satlab’s second generation Satellite-AIS receiver, based on the in-orbit experience gained from the QubeAIS receiver, which has flown on several missions since 2013.",
       "price": 298,
-      "img": "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product14/AIS-Receiver.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511792704"
-   ,
-"car  ousel": [
+      "img": "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product14/AIS-Receiver.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511792704",
+      "car  ousel": [
         "https://ik.imagekit.io/zzzzzzzzzz/subsystems/product14/AIS-Receiver.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1668511792704"
-      ]    }
+      ]
+    }
   ],
   "users": [
     {
@@ -383,14 +377,14 @@
       "id": "Vm7_tvE"
     },
     {
-      "name": "Ezequiel",
-      "lastName": "Zvirgzdins",
-      "email": "EzequielZvirgzdins@gmail.com",
-      "password": "aaaaa",
-      "address": "Carrer marques de campo sagrado, 28, 6-1",
-      "postalCode": "08015",
-      "tel": "11111",
-      "id": "ZPbEJXl"
+      "name": "Assembler",
+      "lastName": "ASsemblre",
+      "email": "assembler@hotmail.com",
+      "password": "0000",
+      "address": "fake address 123",
+      "postalCode": "00000",
+      "tel": "444444",
+      "id": "Qlv4AuK"
     }
   ]
 }

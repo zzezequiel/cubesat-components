@@ -11,7 +11,7 @@ import {satsBuses} from '../../../../api/Api'
 
 
 const Satellites = () => {
-const {data: sats, error, isLoading} = useQuery(['sats'], satsBuses)
+const {data: sats, isLoading} = useQuery(['sats'], satsBuses)
   // const [sats, setSats] = useState([])
   
   
@@ -44,7 +44,7 @@ const {data: sats, error, isLoading} = useQuery(['sats'], satsBuses)
       />
       </div>: null
    }
-   {error? "Status ERROR in query":null}
+   
     <div className='container mt-5'>
       <div className='row'>
         {sats ? sats.map((buses, i) =>(

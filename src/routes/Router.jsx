@@ -32,10 +32,10 @@ const Router = () => {
                   <Route path="/*" element={<Navigate replace to="/" />}></Route>
 
                 
-                <Route path='/checkout' element={
-                <RestrictedRoute><Checkout /></RestrictedRoute>} ></Route>
-                <Route path="/singin" element={<SingIn />}></Route>
-                <Route path="/login" element={<Login />}></Route>
+                  <Route path='/checkout' element={
+                  <RestrictedRoute><Checkout /></RestrictedRoute>} ></Route>
+                  <Route path="/singin" element={<SingIn />}></Route>
+                  <Route path="/login" element={<Login />}></Route>
         </Routes>
         </>
   )

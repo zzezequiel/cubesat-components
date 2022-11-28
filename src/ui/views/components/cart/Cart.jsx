@@ -27,6 +27,7 @@ useEffect(() => {
   );
 }, [cartItems])
 
+console.log(cartItems)
 const total = cartItems.reduce(
   (prev,current)=> prev + current.amount * current.price, 0
 );
